@@ -4,7 +4,8 @@ ruby "1.9.3"
 gem "rails", "3.2.16"
 gem "pg", "0.17.0"
 gem "simple_form", "2.0.4"
-gem 'omniauth-github', '1.0.3'
+# gem 'omniauth-github', '1.0.3'
+gem 'omniauth-twitter'
 gem "paper_trail", "1.6.4"
 gem "redcarpet", "2.2.2"
 gem "bootstrap-sass"
