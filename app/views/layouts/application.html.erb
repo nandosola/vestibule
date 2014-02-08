@@ -13,20 +13,26 @@
   <div class="container">
     <header>
       <div class="row">
-        <div class="span5">
+        <div class="span7">
           <div class="brand">
-            <h1><%= link_to t("vestibule.title"), root_path %></h1>
+            <%# <h1><%= link_to t("vestibule.title"), root_path %1></h1> %>
+            <%= link_to root_path do %>
+              <%= image_tag 'sosz14_logo_white.png', id: 'sosz14_logo'  %>
+            <% end %>
+            <%= link_to 'http://cachirulovalley.com' do %>
+              <%= image_tag 'cachirulovalley_logo.jpg', id: 'cachirulovalley_logo'  %>
+            <% end %>
             <p><%= t("vestibule.strapline").html_safe %></p>
           </div>
         </div>
 
-        <div class="span7">
+        <div class="span5">
           <ul class="nav nav-pills pull-right">
             <li<%= active_nav_class(about_path, anonymous_proposals_path, the_vestibule_process_path) %>><%= link_to "About", about_path %></li>
             <li<%= active_nav_class(proposals_path) %>><%= link_to t("vestibule.proposals.title"), proposals_path %></li>
-            <%= anyone_can :add, :motivation do %>
-            <li<%= active_nav_class(motivation_path, complete_motivation_path) %>><%= link_to t("vestibule.user.motivation.title"), motivation_path %></li>
-            <% end %>
+            <%# <%= anyone_can :add, :motivation do %1> %>
+            <%# <li<%= active_nav_class(motivation_path, complete_motivation_path) %1>><%= link_to t("vestibule.user.motivation.title"), motivation_path %1></li> %>
+            <%# <% end %1> %>
             <%= anyone_can(:see, :agenda) do %><li<%= active_nav_class(selections_path) %>><%= link_to t("vestibule.selections.agenda.nav_title"), selections_path %></li><% end %>
             <% if user_signed_in? -%>
               <li class="dropdown <%= 'active' if active_nav?(dashboard_path, user_path(current_user)) %>">
@@ -56,13 +62,13 @@
         <section id="notices">
           <%= render "shared/notices" %>
 
-          <%= anyone_can :add, :motivation do %>
-          <% if remind_account_for_signup_reason -%>
-          <div class="alert">
-            <%=t("vestibule.user.motivation.missing.your", :link => link_to(t("vestibule.user.motivation.missing.link"), edit_user_path(current_user))).html_safe %>
-          </div>
-          <% end -%>
-          <% end %>
+          <%# <%= anyone_can :add, :motivation do %1> %>
+          <%# <% if remind_account_for_signup_reason -%>
+          <%# <div class="alert"> %>
+          <%#   <%=t("vestibule.user.motivation.missing.your", :link => link_to(t("vestibule.user.motivation.missing.link"), edit_user_path(current_user))).html_safe %1> %>
+          <%# </div> %>
+          <%# <% end -%>
+          <%# <% end %1> %>
         </section>
       </div>
     </div>
