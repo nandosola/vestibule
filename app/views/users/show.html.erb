@@ -24,7 +24,7 @@
     <div class="span6">
       <section id="proposals">
         <h2><%=t "vestibule.user.proposals.your.title" %></h2>
-        <p><%=t "vestibule.user.proposals.your.anonymised.html", :link => link_to(t("vestibule.user.proposals.your.anonymised.link"), anonymous_proposals_path) %></p>
+        <%# <p><%=t "vestibule.user.proposals.your.anonymised.html", :link => link_to(t("vestibule.user.proposals.your.anonymised.link"), anonymous_proposals_path) %1></p> %>
         <% if @user.proposals.any? %>
           <ul>
           <% @user.proposals.each do |proposal| %>

@@ -55,7 +55,7 @@ en:
           other: "%{suggestor} suggests"
         make:
           title: Make your suggestion
-          your: You can respond to suggestions here. As the proposer of the talk, your identity will be masked from other visitors.
+          your: You can respond to suggestions here.
           other: Help develop this into a good proposal by asking questions about anything that isn't clear, making suggestions about what to include or avoid, and asking for more detail or clarifications.
       feed:
         title: "Vestibule :: Suggestions for %{proposal_title}"

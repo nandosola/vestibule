@@ -10,6 +10,7 @@
     <% for proposal in @proposals %>
       <%= content_tag_for :li, proposal do %>
         <%= link_to proposal.title, proposal %>
+        <span class="author">by <%= link_to(proposal.proposer.name, proposal.proposer) %></span>
         <span class="age"><%= proposal_update_information proposal %></span>
       <% end %>
     <% end %>

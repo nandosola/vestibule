@@ -3,6 +3,7 @@
     <div id="proposal">
       <%= proposal_div(@proposal) do %>
         <%= page_title @proposal.title %>
+        <p>by <%= link_to(@proposal.proposer.name, @proposal.proposer) %></p>
         <% if can_show_proposal_author_information?(@proposal) %>
           <p class="alert alert-notice"><%=t "vestibule.proposal.chosen", link: link_to(@proposal.proposer.name, @proposal.proposer) %></p>
         <% end %>

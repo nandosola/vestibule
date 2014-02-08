@@ -16,12 +16,13 @@
 <% end %>
 
 <h2><%=t "vestibule.dashboard.your_proposals.title" %></h2>
-<p><%=t "vestibule.dashboard.your_proposals.html", :link => link_to(t("vestibule.dashboard.your_proposals.link"), anonymous_proposals_path) %></p>
+<%# <p><%=t "vestibule.dashboard.your_proposals.html", :link => link_to(t("vestibule.dashboard.your_proposals.link"), anonymous_proposals_path) %1></p> %>
 <% if @your_proposals.present? %>
   <ul id="your-proposals" class="proposals">
     <% @your_proposals.each do |proposal| %>
       <%= content_tag_for(:li, proposal) do%>
         <%= link_to proposal.title, proposal %>
+        <span class="author">by <%= link_to(proposal.proposer.name, proposal.proposer) %></span>
         <span class="age"><%= time_ago_in_words proposal.last_modified %> old</span>
         <% if proposal.new_suggestions.any? %>
           <%= pluralize proposal.new_suggestions.count, "new suggestion" %>
@@ -41,6 +42,7 @@
     <% @proposals_you_should_look_at.each do |proposal| %>
       <%= content_tag_for :li, proposal do %>
         <%= link_to proposal.title, proposal %>
+        <span class="author">by <%= link_to(proposal.proposer.name, proposal.proposer) %></span>
         <span class="age">updated <%= time_ago_in_words proposal.last_modified %> ago</span>
       <% end %>
     <% end %>
@@ -53,6 +55,7 @@
     <% @proposals_that_have_changed.each do |proposal| %>
       <%= content_tag_for :li, proposal do %>
         <%= link_to proposal.title, proposal %>
+        <span class="author">by <%= link_to(proposal.proposer.name, proposal.proposer) %></span>
         <span class="age">updated <%= time_ago_in_words proposal.last_modified %> ago</span>
       <% end %>
     <% end %>
@@ -65,6 +68,7 @@
     <% @proposals_that_have_been_withdrawn.each do |proposal| %>
       <%= content_tag_for :li, proposal do %>
         <%= link_to proposal.title, proposal %>
+        <span class="author">by <%= link_to(proposal.proposer.name, proposal.proposer) %></span>
         <span class="age">updated <%= time_ago_in_words proposal.last_modified %> ago</span>
       <% end %>
     <% end %>
