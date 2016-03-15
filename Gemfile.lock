@@ -42,14 +42,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
-    columnize (0.3.6)
     database_cleaner (0.9.1)
-    debugger (1.6.2)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.4)
     erubis (2.7.0)
     escape_utils (0.1.9)
     execjs (1.4.0)
@@ -171,7 +164,6 @@ DEPENDENCIES
   bootstrap-sass
   capybara (= 1.1.4)
   database_cleaner (= 0.9.1)
-  debugger
   escape_utils (= 0.1.9)
   factory_girl_rails (= 4.1.0)
   faker (= 1.1.2)

@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-ruby "1.9.3"
+ruby "2.0.0"
 
 gem "rails", "3.2.16"
 gem "pg", "0.17.0"
@@ -34,7 +34,7 @@ group :test do
   gem "timecop", "~> 0.6.0"
 
   # Things that aren't *required*, but you might need as you go.
-  gem "debugger"
+  #gem "debugger"
   gem "launchy"
   gem "escape_utils", "0.1.9"
 end
