@@ -10,6 +10,6 @@
 
 <hr />
 
-<h2 id="slackers">Y estas personas también vienen</h2>
+<h2 id="slackers">Y estas personas necesitan encontrar su motivación ;-)</h2>
 
 <%= @losers.map { |l| link_to('@'+l.twitter_nickname, l) }.to_sentence.html_safe %>
