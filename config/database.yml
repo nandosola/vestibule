@@ -1,0 +1,16 @@
+defaults : &defaults
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *defaults
+  database: vestibule_development
+
+test:
+  <<: *defaults
+  database: vestibule_test
+
+production:
+  <<: *defaults
+  database: vestibule_production
