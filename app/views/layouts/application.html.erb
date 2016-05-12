@@ -64,9 +64,9 @@
 
           <%= anyone_can :add, :motivation do %>
           <% if remind_account_for_signup_reason -%>
-          <div class="alert"> %>
+          <div class="alert">
              <%=t("vestibule.user.motivation.missing.your", :link => link_to(t("vestibule.user.motivation.missing.link"), edit_user_path(current_user))).html_safe %>
-           </div> %>
+           </div>
            <% end -%>
            <% end %>
         </section>
