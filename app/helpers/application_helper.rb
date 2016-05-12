@@ -33,14 +33,7 @@ module ApplicationHelper
   end
 
   def avatar_url(user, bigger=false)
-    hash =
-      if user.email.present?
-        email_address = user.email.downcase
-        Digest::MD5.hexdigest(email_address)
-      else
-        '0'
-      end
-    "http://www.gravatar.com/avatar/#{hash}"
+    user.twitter_image
   end
 
   def markdown(text)
@@ -64,7 +57,7 @@ module ApplicationHelper
   end
 
   def user_name_for_rss(for_user)
-    %{#{h for_user.name} (@#{h for_user.github_nickname})}.html_safe
+    %{#{h for_user.name} (@#{h for_user.twitter_nickname})}.html_safe
   end
 
   def user_name(start_sentence = true)

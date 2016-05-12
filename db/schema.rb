@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(:version => 20130315135423) do
     t.datetime "updated_at",         :null => false
     t.string   "name"
     t.integer  "contribution_score"
-    t.string   "github_uid"
-    t.string   "github_nickname"
-    t.string   "email"
+    t.string   "twitter_uid"
+    t.string   "twitter_nickname"
+    t.string   "twitter_image"
   end
 
 end

@@ -29,7 +29,7 @@ module Vestibule
     config.assets.initialize_on_precompile = false
 
     config.middleware.use OmniAuth::Builder do
-      provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET'], scope: 'user:email'
+      provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
     end
 
     def modes
