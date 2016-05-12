@@ -9,6 +9,8 @@ gem "paper_trail", "2.7.2"
 gem "redcarpet", "2.2.2"
 gem "bootstrap-sass", "2.3.2.2"
 
+gem 'unicorn', '~> 5.1'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
