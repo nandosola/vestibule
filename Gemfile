@@ -1,14 +1,13 @@
 source "http://rubygems.org"
-ruby "2.0.0"
+ruby "2.1.10"
 
-gem "rails", "3.2.16"
-gem "pg", "0.17.0"
+gem "rails", "3.2.22.2"
+gem "pg", "0.18.4"
 gem "simple_form", "2.0.4"
-# gem 'omniauth-github', '1.0.3'
 gem 'omniauth-twitter'
-gem "paper_trail", "1.6.4"
+gem "paper_trail", "2.7.2"
 gem "redcarpet", "2.2.2"
-gem "bootstrap-sass"
+gem "bootstrap-sass", "2.3.2.2"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,12 +28,12 @@ group :test do
   gem "shoulda", "3.3.2"
   gem "capybara", "1.1.4"
   gem "database_cleaner", "0.9.1"
-  gem "mocha", "0.13.1", :require => false
+  gem "mocha", "0.13.3", :require => false
   gem "faker", "1.1.2"
   gem "timecop", "~> 0.6.0"
 
   # Things that aren't *required*, but you might need as you go.
-  #gem "debugger"
+  gem "byebug"
   gem "launchy"
   gem "escape_utils", "0.1.9"
 end
